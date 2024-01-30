@@ -14,14 +14,10 @@ public class HlavniProgram {
 
     //tohle udela ctverec
     zofka.penDown();
-    zofka.turnRight(90);
-    zofka.move(100);
-    zofka.turnRight(90);
-    zofka.move(100);
-    zofka.turnRight(90);
-    zofka.move(100);
-    zofka.turnRight(90);
-    zofka.move(100);
+    for (int i = 0; i < 4; i++) {;
+      zofka.turnRight(90);
+      zofka.move(100);
+    }
 
     //strecha
     zofka.turnRight(60);
