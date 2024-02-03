@@ -51,6 +51,10 @@ public class HlavniProgram {
     popojdiDoprava(90,60);
 
     //jsme ready na ctvrty domek a cyklus pro nakresleni vice domecku v rade
+    for (int i = 0; i < 4; i++) {
+      nakresliDomek(100, 60);
+      popojdiDoprava(90,60);
+    }
   }
   public void nakresliCtverec(int strCtverce) {
     zofka.penDown();
