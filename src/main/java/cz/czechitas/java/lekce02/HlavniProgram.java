@@ -37,18 +37,16 @@ public class HlavniProgram {
     zofka.turnLeft(30);
     zofka.move(30);
 
+    //druhy domek
     nakresliCtverec(100);
     nakresliStrechu(60);
 
+    //popojiti doprava, jsme ready na treti domek
     zofka.penUp();
     zofka.turnLeft(90);
     zofka.move(30);
 
-    //v dalsim kroku chci udelat z kodu vyse metodu
-    //chtela bych take pomoci cyklu zkratit kod
-
-    //metoda na kresleni domecku, ktera se hodi i pro prasatko
-
+    //v dalsim kroku chci udelat metodu pro cely domek
   }
   public void nakresliCtverec(int strCtverce) {
     zofka.penDown();
