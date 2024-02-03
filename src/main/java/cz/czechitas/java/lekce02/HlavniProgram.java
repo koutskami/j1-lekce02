@@ -3,6 +3,7 @@ package cz.czechitas.java.lekce02;
 import cz.czechitas.java.lekce02.engine.Turtle;
 
 public class HlavniProgram {
+  public static final int PRAVY_UHEL = 90;
   private Turtle zofka;
 
   public static void main(String[] args) {
@@ -14,14 +15,14 @@ public class HlavniProgram {
 
     //chci si nachystat zelvu do prostoru vlevo
     zofka.penUp();
-    zofka.turnLeft(90);
+    zofka.turnLeft(PRAVY_UHEL);
     zofka.move(450);
-    zofka.turnRight(90);
+    zofka.turnRight(PRAVY_UHEL);
 
-    //tohle udela ctverec
+    //tohle udela ctverec - zdi domecku
     zofka.penDown();
-    for (int i = 0; i < 4; i++) {;
-      zofka.turnRight(90);
+    for (int i = 0; i < 4; i++) {
+      zofka.turnRight(PRAVY_UHEL);
       zofka.move(100);
     }
 
@@ -36,8 +37,34 @@ public class HlavniProgram {
     zofka.turnLeft(30);
     zofka.move(30);
 
+    nakresliCtverec(100);
+    nakresliStrechu(60);
+
+    zofka.penUp();
+    zofka.turnLeft(90);
+    zofka.move(30);
+
     //v dalsim kroku chci udelat z kodu vyse metodu
     //chtela bych take pomoci cyklu zkratit kod
-  }
 
+    //metoda na kresleni domecku, ktera se hodi i pro prasatko
+
+  }
+  public void nakresliCtverec(int strCtverce) {
+    zofka.penDown();
+    for (int i = 0; i < 4; i++) {
+      int pravyUhel = PRAVY_UHEL;
+      zofka.move(strCtverce);
+      zofka.turnRight(pravyUhel);
+    }
+  }
+  public void nakresliStrechu(int strStrechy) {
+    zofka.turnLeft(30);
+    for (int i = 0; i < 2; i++) {
+      int uhelTrojuhelniku = 60;
+      zofka.move(strStrechy);
+      zofka.turnRight(uhelTrojuhelniku);
+    }
+  }
+  //public void Domecek()
 }
