@@ -46,7 +46,11 @@ public class HlavniProgram {
     zofka.turnLeft(90);
     zofka.move(30);
 
-    //v dalsim kroku chci udelat metodu pro cely domek
+    //metoda pro domek a presun doprava
+    nakresliDomek(100, 60);
+    popojdiDoprava(90,60);
+
+    //jsme ready na ctvrty domek a cyklus pro nakresleni vice domecku v rade
   }
   public void nakresliCtverec(int strCtverce) {
     zofka.penDown();
@@ -64,5 +68,13 @@ public class HlavniProgram {
       zofka.turnRight(uhelTrojuhelniku);
     }
   }
-  //public void Domecek()
+  public void nakresliDomek(int strCtverce, int strStrechy) {
+    nakresliCtverec(strCtverce);
+    nakresliStrechu(strStrechy);
+  }
+  public void popojdiDoprava(int byAngle, int pixels) {
+    zofka.penUp();
+    zofka.turnLeft(byAngle);
+    zofka.move(pixels);
+  }
 }
