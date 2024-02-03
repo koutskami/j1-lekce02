@@ -12,6 +12,12 @@ public class HlavniProgram {
   public void start() {
     zofka = new Turtle();
 
+    //chci si nachystat zelvu do prostoru vlevo
+    zofka.penUp();
+    zofka.turnLeft(90);
+    zofka.move(450);
+    zofka.turnRight(90);
+
     //tohle udela ctverec
     zofka.penDown();
     for (int i = 0; i < 4; i++) {;
@@ -19,7 +25,7 @@ public class HlavniProgram {
       zofka.move(100);
     }
 
-    //strecha
+    //strecha - rovnostranny trojuhelnik
     zofka.turnRight(60);
     zofka.move(60);
     zofka.turnRight(60);
@@ -32,7 +38,6 @@ public class HlavniProgram {
 
     //v dalsim kroku chci udelat z kodu vyse metodu
     //chtela bych take pomoci cyklu zkratit kod
-
   }
 
 }
